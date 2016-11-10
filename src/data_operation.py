@@ -3,6 +3,11 @@ import os
 
 
 def load_data(input_file):
+    '''
+    Load batch data
+    :param input_file: name of the input batch file
+    :return: list of tuples that have sender and receiver of money
+    '''
     os.chdir("..")
     rows = []
     with open(os.path.join(os.getcwd(), "paymo_input", input_file), 'r', encoding="utf8") as csvfile:
@@ -18,6 +23,13 @@ def load_data(input_file):
 
 
 def output_stream_data(input_file, friends_connections, feature):
+    '''
+    Load and output stream payment data
+    :param input_file: name of stream file
+    :param friends_connections: friends graph created from batch file
+    :param feature: either 1, 2 or 3 based on the required feature
+    :return: it will write a output file
+    '''
     os.chdir("..")
     rows = []
     with open(os.path.join(os.getcwd(), "paymo_input", input_file), 'r', encoding="utf8") as csvfile:
