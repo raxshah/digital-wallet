@@ -1,4 +1,2 @@
 .idea/
-__pycache__/
-paymo_input/
-paymo_output/
+src/__pycache__/
